@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-16T10:27:04.523Z",
+  "node": "v24.19.0",
+  "corpus": {
+    "chains": 6,
+    "linksPerChain": 12,
+    "pairs": 330,
+    "violationIntervals": 24,
+    "undecided": 0
+  },
+  "certify": {
+    "samples": 9,
+    "coldStartMs": 207.6,
+    "minMs": 113.847,
+    "medianMs": 117.256,
+    "p95Ms": 122.376,
+    "meanMs": 117.942,
+    "stddevMs": 2.911,
+    "relStdPct": 2.47
+  },
+  "perChainMedianMs": {
+    "fold-a": 17.601,
+    "fold-b": 31.634,
+    "fold-c": 36.075,
+    "fold-d": 26.102,
+    "wave-clean-1": 2.952,
+    "wave-clean-2": 2.278
+  },
+  "repair": {
+    "chain": "fold-b",
+    "ms": 494.189,
+    "scale": 0.9581651639938354,
+    "scalePct": 4.183,
+    "certifiedViolations": 0,
+    "certifiedUndecided": 0,
+    "endEffectorShiftRel": 0.05016
+  }
+}

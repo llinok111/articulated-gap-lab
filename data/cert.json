@@ -1,0 +1,317 @@
+{
+ "source": "tools/gen-cert.mjs",
+ "chains": [
+  {
+   "name": "fold-a",
+   "links": 12,
+   "scale": 5.447024943643246,
+   "certificate": {
+    "pairs": 55,
+    "violations": [],
+    "undecided": 0,
+    "intervalsCertified": 4706,
+    "minGap": 0.036783671774484744,
+    "evaluations": 8972,
+    "violationCount": 0
+   },
+   "repair": {
+    "needed": false
+   }
+  },
+  {
+   "name": "fold-b",
+   "links": 12,
+   "scale": 5.447045680657679,
+   "certificate": {
+    "pairs": 55,
+    "violations": [
+     {
+      "i": 0,
+      "k": 5,
+      "t0": 0.613744432,
+      "t1": 0.631181589,
+      "minGap": -0.005925999590008724
+     },
+     {
+      "i": 1,
+      "k": 9,
+      "t0": 0.21461387,
+      "t1": 0.224625628,
+      "minGap": -0.0028677603534295326
+     },
+     {
+      "i": 1,
+      "k": 9,
+      "t0": 0.983187613,
+      "t1": 1,
+      "minGap": -0.006007673023596921
+     },
+     {
+      "i": 1,
+      "k": 10,
+      "t0": 0.971804697,
+      "t1": 1,
+      "minGap": -0.060735495573134596
+     },
+     {
+      "i": 2,
+      "k": 8,
+      "t0": 0.990451075,
+      "t1": 1,
+      "minGap": -0.007980521685130665
+     },
+     {
+      "i": 2,
+      "k": 9,
+      "t0": 0.896090323,
+      "t1": 1,
+      "minGap": -0.08780419353420334
+     },
+     {
+      "i": 2,
+      "k": 10,
+      "t0": 0.863917186,
+      "t1": 1,
+      "minGap": -0.08411904600729023
+     },
+     {
+      "i": 3,
+      "k": 8,
+      "t0": 0.985395096,
+      "t1": 1,
+      "minGap": -0.025778260416025295
+     },
+     {
+      "i": 3,
+      "k": 9,
+      "t0": 0.867100784,
+      "t1": 1,
+      "minGap": -0.0668759480610612
+     },
+     {
+      "i": 3,
+      "k": 10,
+      "t0": 0.859276683,
+      "t1": 0.93862548,
+      "minGap": -0.004282755632996127
+     },
+     {
+      "i": 4,
+      "k": 11,
+      "t0": 0.518284897,
+      "t1": 0.555683325,
+      "minGap": -0.022407920981136392
+     },
+     {
+      "i": 5,
+      "k": 11,
+      "t0": 0.50335495,
+      "t1": 0.544745416,
+      "minGap": -0.02711317404206029
+     }
+    ],
+    "undecided": 0,
+    "intervalsCertified": 7332,
+    "minGap": -0.08780419353420334,
+    "evaluations": 14256,
+    "violationCount": 12
+   },
+   "repair": {
+    "needed": true,
+    "found": true,
+    "scale": 0.9581651639938354,
+    "scalePct": 4.183483600616455,
+    "endEffectorShiftRel": 0.050157037713777705,
+    "minimalityProbe": {
+     "scale": 0.9631651639938354,
+     "violations": 2,
+     "undecided": 0
+    },
+    "certified": {
+     "pairs": 55,
+     "violations": 0,
+     "undecided": 0,
+     "intervalsCertified": 5134,
+     "minGap": 4.4198168433484675e-7,
+     "evaluations": 9828
+    }
+   }
+  },
+  {
+   "name": "fold-c",
+   "links": 12,
+   "scale": 5.447097570137187,
+   "certificate": {
+    "pairs": 55,
+    "violations": [
+     {
+      "i": 0,
+      "k": 8,
+      "t0": 0.944308501,
+      "t1": 1,
+      "minGap": -0.04636780859383183
+     },
+     {
+      "i": 0,
+      "k": 9,
+      "t0": 0.943474529,
+      "t1": 0.981283234,
+      "minGap": -0.016044008786238767
+     },
+     {
+      "i": 1,
+      "k": 7,
+      "t0": 0.961243174,
+      "t1": 1,
+      "minGap": -0.012716209970615455
+     },
+     {
+      "i": 1,
+      "k": 8,
+      "t0": 0.836565084,
+      "t1": 1,
+      "minGap": -0.0739275849708808
+     },
+     {
+      "i": 1,
+      "k": 9,
+      "t0": 0.813225222,
+      "t1": 0.984897399,
+      "minGap": -0.07562960249021612
+     },
+     {
+      "i": 2,
+      "k": 8,
+      "t0": 0.815560741,
+      "t1": 0.934338549,
+      "minGap": -0.08168403318309467
+     },
+     {
+      "i": 2,
+      "k": 9,
+      "t0": 0.743623835,
+      "t1": 0.778726413,
+      "minGap": -0.00820089033068655
+     },
+     {
+      "i": 2,
+      "k": 9,
+      "t0": 0.793109951,
+      "t1": 0.887490835,
+      "minGap": -0.02240971972196329
+     },
+     {
+      "i": 2,
+      "k": 10,
+      "t0": 0.742269362,
+      "t1": 0.763318866,
+      "minGap": -0.013206531312757341
+     },
+     {
+      "i": 3,
+      "k": 11,
+      "t0": 0.372175933,
+      "t1": 0.403505727,
+      "minGap": -0.019580042283276117
+     },
+     {
+      "i": 4,
+      "k": 11,
+      "t0": 0.361884747,
+      "t1": 0.425677938,
+      "minGap": -0.025120784121251905
+     },
+     {
+      "i": 4,
+      "k": 11,
+      "t0": 0.446058071,
+      "t1": 0.466148966,
+      "minGap": -0.005288346312749548
+     }
+    ],
+    "undecided": 0,
+    "intervalsCertified": 7948,
+    "minGap": -0.08168403318309467,
+    "evaluations": 15494,
+    "violationCount": 12
+   },
+   "repair": {
+    "needed": true,
+    "found": true,
+    "scale": 0.9571826648712158,
+    "scalePct": 4.281733512878416,
+    "endEffectorShiftRel": 0.049529416712524046,
+    "minimalityProbe": {
+     "scale": 0.9621826648712158,
+     "violations": 3,
+     "undecided": 0
+    },
+    "certified": {
+     "pairs": 55,
+     "violations": 0,
+     "undecided": 0,
+     "intervalsCertified": 5083,
+     "minGap": 3.785894161500991e-7,
+     "evaluations": 9726
+    }
+   }
+  },
+  {
+   "name": "fold-d",
+   "links": 12,
+   "scale": 5.447077672627235,
+   "certificate": {
+    "pairs": 55,
+    "violations": [],
+    "undecided": 0,
+    "intervalsCertified": 6947,
+    "minGap": 0.05652790740008923,
+    "evaluations": 13454,
+    "violationCount": 0
+   },
+   "repair": {
+    "needed": false
+   }
+  },
+  {
+   "name": "wave-clean-1",
+   "links": 12,
+   "scale": 5.447018655066098,
+   "certificate": {
+    "pairs": 55,
+    "violations": [],
+    "undecided": 0,
+    "intervalsCertified": 974,
+    "minGap": 0.30926317067200493,
+    "evaluations": 1508,
+    "violationCount": 0
+   },
+   "repair": {
+    "needed": false
+   }
+  },
+  {
+   "name": "wave-clean-2",
+   "links": 12,
+   "scale": 5.447061590162737,
+   "certificate": {
+    "pairs": 55,
+    "violations": [],
+    "undecided": 0,
+    "intervalsCertified": 764,
+    "minGap": 0.3062892836023309,
+    "evaluations": 1088,
+    "violationCount": 0
+   },
+   "repair": {
+    "needed": false
+   }
+  }
+ ],
+ "totals": {
+  "pairs": 330,
+  "violations": 24,
+  "undecided": 0,
+  "intervalsCertified": 28671
+ }
+}
