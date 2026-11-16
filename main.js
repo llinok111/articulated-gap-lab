@@ -37,7 +37,8 @@ const matClear = () => new THREE.MeshStandardMaterial({ color: 0x6f8fae, metalne
 const matHit = () => new THREE.MeshStandardMaterial({ color: 0xff5d52, emissive: 0x5a0f0b, metalness: 0.2, roughness: 0.4 });
 
 function disposeGroup() {
-  for (const c of state.group.children) { c.geometry?.dispose?.(); c.material?.dispose?.(); }
+  // CAP_GEO/SPH_GEO are shared across links: only per-link materials are owned.
+  for (const c of state.group.children) { c.material?.dispose?.(); }
   state.group.clear();
   state.linkMats = [];
 }
