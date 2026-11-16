@@ -12,10 +12,10 @@ stage.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x0b0f14);
 const camera = new THREE.PerspectiveCamera(45, 1, 0.01, 100);
-camera.position.set(2.2, 1.6, 2.6);
+camera.position.set(4, 3, 5);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.target.set(1.2, 0, 0);
+controls.target.set(2.4, 0, 0);
 
 scene.add(new THREE.HemisphereLight(0xbcd6ff, 0x101820, 2.0));
 const key = new THREE.DirectionalLight(0xffffff, 2.2);
@@ -151,8 +151,13 @@ function loadChain(name) {
     : 'not needed / not found';
   document.getElementById('cShift').textContent = rep && rep.found
     ? `${(rep.endEffectorShiftRel * 100).toFixed(2)}% of reach` : '–';
-  camera.position.set(2.2, 1.6, 2.6);
-  controls.target.set(1.2, 0, 0);
+  const R = state.chain.scale;
+  controls.target.set(R * 0.55, 0, 0);
+  camera.position.set(R * 0.9, R * 0.55, R * 1.15);
+  camera.near = Math.max(1e-4, R / 500);
+  camera.far = R * 40;
+  camera.updateProjectionMatrix();
+  controls.update();
   refresh();
 }
 
