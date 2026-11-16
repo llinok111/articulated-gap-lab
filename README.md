@@ -41,6 +41,11 @@ because it fetches `data/*.json`.
 | baseline | 30 Hz sampling finds 20/24 intervals; 60 Hz and above find 24/24 **at the sampled instants only** — sampling cannot certify between samples |
 | generator | `rm -rf data && node tools/gen-sample.mjs` twice → identical sha256 (A1) |
 
+All timings above are the committed `bench/result.json` run. Re-runs on the same
+4-core VM land in 105–120 ms median (a clean-clone re-run measured 108.1 ms,
+cold 179.5 ms); the logical outputs (330 pairs, 24 intervals, 0 undecided,
+repair scale 0.95817) are byte-identical across re-runs.
+
 ### Why slowdown is not a repair
 Collision is a configuration-space property. Stretching the same motion 10×
 leaves every violation interval unchanged in normalized time (A10: 12 intervals,
