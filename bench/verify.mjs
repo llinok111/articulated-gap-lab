@@ -129,6 +129,12 @@ const repair = minimalAmplitudeScale(built.find((b) => b.spec.name === 'fold-b')
 check('A9', repair.found && repair.certified.violations === 0 && repair.certified.undecided === 0 && repair.minimalityProbe.violations >= 1,
   `fold-b repair: scale ${repair.scale.toFixed(5)} (-${repair.scalePct.toFixed(2)}% amplitude), re-cert 0/${repair.certified.pairs} violations, 0 undecided; probe ${repair.minimalityProbe.scale.toFixed(5)} still has ${repair.minimalityProbe.violations} violation(s)`);
 
+// A16 the second violating chain is repaired and re-certified too
+const fcBuilt = built.find((b) => b.spec.name === 'fold-c');
+const repairC = minimalAmplitudeScale(fcBuilt.chain, fcBuilt.motion);
+check('A16', repairC.found && repairC.certified.violations === 0 && repairC.certified.undecided === 0 && repairC.minimalityProbe.violations >= 1,
+  `fold-c repair: scale ${repairC.scale.toFixed(5)} (-${repairC.scalePct.toFixed(2)}% amplitude), re-cert 0/${repairC.certified.pairs} violations, 0 undecided; probe ${repairC.minimalityProbe.scale.toFixed(5)} still has ${repairC.minimalityProbe.violations} violation(s)`);
+
 // A10 time reparameterization is NOT a repair (10x slowdown, same configurations)
 const bSpec = built.find((b) => b.spec.name === 'fold-b').spec;
 const slow = makeMotion(bSpec.motion.times.map((t) => t * 10), bSpec.motion.keys);

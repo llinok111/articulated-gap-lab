@@ -36,8 +36,8 @@ because it fetches `data/*.json`.
 | scale invariance | scale 1e-6 … 1e6: same 12 intervals, dT ≤ 2.2e-16 s, minGap/s relative error ≤ 4.3e-15 |
 | timing | cold start 207.6 ms; 9 reps: median **117.3 ms**, p95 122.4 ms, stddev 2.9 ms (2.47 %) |
 | per chain | fold-a 17.6 ms, fold-b 31.6 ms, fold-c 36.1 ms, fold-d 26.1 ms, clean chains 2.3–3.0 ms |
-| repair | fold-b: motion amplitude ×0.95817 (−4.18 %), re-certified 0/55 violations, 0 undecided; probe at ×0.96317 violates again (2 intervals) |
-| repair cost | end-effector shift 5.02 % of chain reach; repair search 494 ms |
+| repair (both violating chains) | fold-b: amplitude ×0.95817 (−4.18 %), fold-c ×0.95718 (−4.28 %); both re-certified 0/55 violations, 0 undecided; probes at +0.005 violate again (2 and 3 intervals) |
+| repair cost | fold-b end-effector shift 5.02 % of chain reach; repair search 494 ms |
 | baseline | 30 Hz sampling finds 20/24 intervals; 60 Hz and above find 24/24 **at the sampled instants only** — sampling cannot certify between samples |
 | generator | `rm -rf data && node tools/gen-sample.mjs` twice → identical sha256 (A1) |
 
