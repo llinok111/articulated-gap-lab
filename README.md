@@ -14,7 +14,7 @@ Every proof decision is reproducible in node; the browser runs the same module.
 
 ```bash
 node tools/gen-sample.mjs && node tools/gen-cert.mjs   # data/chains.json, data/cert.json
-node bench/verify.mjs                                  # 15 assertions, exit 0
+node bench/verify.mjs                                  # 16 assertions, exit 0
 node bench/bench.mjs                                   # writes bench/result.json
 node baseline/naive.mjs                                # the frame-sampling baseline
 python3 -m http.server 4173                             # then open http://localhost:4173
@@ -100,7 +100,7 @@ index.html            importmap (three r0.170.0) + control panel
 tools/gen-sample.mjs  deterministic corpus (seed 0x5EEDB2026)
 tools/gen-cert.mjs    runs the certificate and writes the numbers the page replays
 bench/oracle.mjs      independent cross-check (shares no code or constant)
-bench/verify.mjs      A1–A15 assertions
+bench/verify.mjs      A1–A16 assertions
 bench/bench.mjs       1 warmup + 9 reps + cold start -> bench/result.json
 baseline/naive.mjs    fixed-rate frame sampling baseline
 ```
