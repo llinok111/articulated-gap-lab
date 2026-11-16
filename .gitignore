@@ -9,3 +9,5 @@ __pycache__/
 *.7z
 .DS_Store
 *.log
+state/
+.model-patch.yml
